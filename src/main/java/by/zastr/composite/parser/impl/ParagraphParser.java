@@ -18,8 +18,8 @@ public class ParagraphParser implements TextParser{
 		for (int i=0; i< paragraph.length;i++) {
 			if(!paragraph[i].isBlank()) {
 				TextComponent sentenceComposit = new TextComposite(ComponentType.SENTENCE);
-			sentenceComposit=parser.parse(paragraph[i]);
-			paragraphComposit.add(sentenceComposit);
+			    sentenceComposit=parser.parse(paragraph[i]);
+			    paragraphComposit.add(sentenceComposit);
 			}
 		}
 		return paragraphComposit;
