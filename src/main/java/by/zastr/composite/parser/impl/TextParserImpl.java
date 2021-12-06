@@ -9,7 +9,7 @@ import by.zastr.composite.parser.TextParser;
 
 public class TextParserImpl implements TextParser{
 	private static final String DELIMETER_REGIX="\t|\s{2,4}";
-	private TextParser parser= new ParadraphParser();
+	private TextParser parser= new ParagraphParser();
 
 	@Override
 	public TextComponent parse(String text) throws CompositeException {
