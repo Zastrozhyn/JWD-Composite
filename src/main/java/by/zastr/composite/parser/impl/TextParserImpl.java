@@ -7,9 +7,9 @@ import by.zastr.composite.exception.CompositeException;
 import by.zastr.composite.parser.TextParser;
 
 
-public class ParagraphParser implements TextParser{
+public class TextParserImpl implements TextParser{
 	private static final String DELIMETER_REGIX="\t|\s{2,4}";
-	private TextParser parser= new SentenceParser();
+	private TextParser parser= new ParadraphParser();
 
 	@Override
 	public TextComponent parse(String text) throws CompositeException {
