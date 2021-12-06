@@ -6,9 +6,9 @@ public class Symbol implements TextComponent {
 	
 	private char symbol;
 
-	public Symbol(char letter) {
+	public Symbol(char symbol) {
 		super();
-		this.symbol = letter;
+		this.symbol = symbol;
 	}
 
 	@Override
