@@ -7,4 +7,5 @@ public interface TextComponent {
 	boolean remove (TextComponent component);
 	TextComponent getComponent(int index);
 	List<TextComponent> getAllComponent();
+	ComponentType getComponentType();
 }

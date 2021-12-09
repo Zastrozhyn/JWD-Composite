@@ -13,6 +13,7 @@ public class TextComposite implements TextComponent{
 		componentList= new ArrayList<TextComponent>();
 	}
 	
+	@Override
 	public ComponentType getComponentType() {
 		return componentType;
 	}
@@ -68,8 +69,12 @@ public class TextComposite implements TextComponent{
 	@Override
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
-		componentList.forEach(o -> stringBuilder.append(o.toString()));
+		for (TextComponent component : componentList) {
+			stringBuilder.append(component.toString());
+			if (component.getComponentType().equals(ComponentType.LEXEME)) {
+				stringBuilder.append(" ");
+			}
+		}
 		return stringBuilder.toString();	
 	}
-
 }

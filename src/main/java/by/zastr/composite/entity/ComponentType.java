@@ -1,10 +1,15 @@
 package by.zastr.composite.entity;
 
 public enum ComponentType {
+	DOCUMENT,
 	WORD,
-	Symbol,
+	SYMBOL,
 	LEXEME,
 	SENTENCE,
 	PARAGRAPH,
+	LETTER,
+	PUNCTUATION,
+	DIGIT,
 	TEXT;
+	
 }

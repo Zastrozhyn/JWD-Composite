@@ -4,11 +4,17 @@ import java.util.List;
 
 public class Letter implements TextComponent{
 	private char letter;
+	private ComponentType componentType;
 
 	
 	public Letter(char letter) {
 		super();
 		this.letter = letter;
+		componentType = ComponentType.LETTER;
+	}
+	@Override
+	public ComponentType getComponentType() {
+		return componentType;
 	}
 
 	@Override
@@ -57,6 +63,4 @@ public class Letter implements TextComponent{
 	public String toString() {
 		return String.valueOf(letter);
 	}
-	
-
 }

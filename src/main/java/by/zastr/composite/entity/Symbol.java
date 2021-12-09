@@ -5,10 +5,12 @@ import java.util.List;
 public class Symbol implements TextComponent {
 	
 	private char symbol;
+	private ComponentType componentType;
 
 	public Symbol(char symbol) {
 		super();
 		this.symbol = symbol;
+		componentType = ComponentType.SYMBOL;
 	}
 
 	@Override
@@ -29,6 +31,11 @@ public class Symbol implements TextComponent {
 	@Override
 	public List<TextComponent> getAllComponent() {
 		throw new UnsupportedOperationException("Not available operation component"+this.getClass());
+	}
+	
+	@Override
+	public ComponentType getComponentType() {
+		return componentType;
 	}
 
 	@Override
