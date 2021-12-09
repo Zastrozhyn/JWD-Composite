@@ -8,6 +8,7 @@ import by.zastr.composite.parser.CompositeParser;
 
 public class LexemeParser implements CompositeParser{
 	private static final String SENTENCE_DELIMETER_REGIX = " ";
+//	private static final String SENTENCE_DELIMETER_REGIX = "\s";	
 	private CompositeParser parser = new SymbolParser();
 
 	@Override
@@ -17,7 +18,7 @@ public class LexemeParser implements CompositeParser{
         }
 		String[] lexemeArray = sentence.split(SENTENCE_DELIMETER_REGIX);
 		TextComposite sentenceComposit = new TextComposite(ComponentType.SENTENCE);
-		for (int i = 0; i < lexemeArray .length;i++) {
+		for (int i = 0; i < lexemeArray.length;i++) {
 			if(!lexemeArray [i].isBlank()) {
 				TextComponent symbolComposit = new TextComposite(ComponentType.LEXEME);
 			    symbolComposit = parser.parse(lexemeArray[i]);
