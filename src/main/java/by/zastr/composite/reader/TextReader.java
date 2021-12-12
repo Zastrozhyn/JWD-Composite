@@ -24,7 +24,7 @@ public class TextReader {
 		Path dataFile = Paths.get(fileName);
         String text="";
 
-        try (Stream<String> dataStream = Files.lines(dataFile,Charset.forName("windows-1251"))){
+        try (Stream<String> dataStream = Files.lines(dataFile, Charset.forName("windows-1251"))){
         	text= dataStream.collect(Collectors.joining());
             logger.log(Level.INFO, "Read file {} is successful", dataFile.getFileName());
 

@@ -70,9 +70,17 @@ public class TextComposite implements TextComponent{
 	public String toString() {
 		StringBuilder stringBuilder = new StringBuilder();
 		for (TextComponent component : componentList) {
+			if (component.getComponentType().equals(ComponentType.PARAGRAPH)) {
+				stringBuilder.append("    ");
+			}
+			
 			stringBuilder.append(component.toString());
+			
 			if (component.getComponentType().equals(ComponentType.LEXEME)) {
 				stringBuilder.append(" ");
+			}
+			if (component.getComponentType().equals(ComponentType.PARAGRAPH)) {
+				stringBuilder.append("\n");
 			}
 		}
 		return stringBuilder.toString();	
